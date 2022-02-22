@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "243818618156",
+    "project_id": "reduceo-4ceea",
+    "storage_bucket": "reduceo-4ceea.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:243818618156:android:4cbeabce8e7454ffba6089",
+        "android_client_info": {
+          "package_name": "com.tijil.reduceo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "243818618156-vibj228d3bkkkjo25lcbu03o00ilmpq3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBZm9BphExRqsqvbdwaCOfpjteIIDzz2D8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "243818618156-vibj228d3bkkkjo25lcbu03o00ilmpq3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
