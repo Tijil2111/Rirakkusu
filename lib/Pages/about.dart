@@ -9,25 +9,25 @@ class AboutScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final user = FirebaseAuth.instance.currentUser!;
+    final user = FirebaseAuth.instance.currentUser;
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: Text(
           'About You',
           style: TextStyle(
-              color: Colors.deepPurpleAccent, fontWeight: FontWeight.bold),
+              color: Colors.deepOrangeAccent, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         backgroundColor: Colors.white,
         elevation: 0,
         leading: InkWell(
             onTap: () {
-              Navigator.pushReplacementNamed(context, '/home');
+              Navigator.pushReplacementNamed(context, '/main');
             },
             child: const Icon(
               Icons.arrow_back_ios_new_outlined,
-              color: Colors.deepPurpleAccent,
+              color: Colors.deepOrangeAccent,
               size: 16,
             )),
       ),
@@ -37,18 +37,19 @@ class AboutScreen extends StatelessWidget {
             ClipRRect(
               child: Image(
                 image: AssetImage('assets/user.png'),
+                height: 200,
               ),
             ),
             SizedBox(
-              height: 100,
+              height: 70,
             ),
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: Text(
-                'Your email id is ${user.email!}',
+                'Your email id is ${user?.email}',
                 style: TextStyle(
                   fontSize: 20,
-                  color: Colors.deepPurpleAccent,
+                  color: Colors.deepOrangeAccent,
                 ),
               ),
             ),
@@ -61,7 +62,7 @@ class AboutScreen extends StatelessWidget {
                 'Check your Unique ID',
                 style: TextStyle(
                   fontSize: 20,
-                  color: Colors.deepPurpleAccent,
+                  color: Colors.deepOrangeAccent,
                 ),
               ),
             ),
@@ -80,14 +81,14 @@ class AboutScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Colors.deepPurpleAccent,
+                          color: Colors.deepOrangeAccent,
                         ),
                       ),
                       content: Text(
-                        'Dont Share it. Your UID : ${user.uid}',
+                        'Dont Share it. Your UID : ${user?.uid}',
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
-                          color: Colors.deepPurpleAccent,
+                          color: Colors.deepOrangeAccent,
                         ),
                       ),
                     );
@@ -96,7 +97,7 @@ class AboutScreen extends StatelessWidget {
               },
               label: const Text('Reveal It'),
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepPurpleAccent,
+                primary: Colors.deepOrangeAccent,
                 minimumSize: const Size(300, 50),
               ),
             ),
@@ -115,7 +116,7 @@ class AboutScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Colors.deepPurpleAccent,
+                          color: Colors.deepOrangeAccent,
                         ),
                       ),
                       content: Row(
@@ -129,7 +130,7 @@ class AboutScreen extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                             ),
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.deepPurpleAccent,
+                              primary: Colors.deepOrangeAccent,
                               minimumSize: const Size(40, 50),
                             ),
                           ),
@@ -142,11 +143,11 @@ class AboutScreen extends StatelessWidget {
                               FirebaseAuth.instance.signOut();
                             },
                             child: Text(
-                              'Yep',
+                              'Yep !',
                               style: TextStyle(color: Colors.white),
                             ),
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.deepPurpleAccent,
+                              primary: Colors.deepOrangeAccent,
                               minimumSize: const Size(40, 50),
                             ),
                           ),
@@ -158,7 +159,7 @@ class AboutScreen extends StatelessWidget {
               },
               label: const Text('Log Out'),
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepPurpleAccent,
+                primary: Colors.deepOrangeAccent,
                 minimumSize: const Size(300, 50),
               ),
             ),

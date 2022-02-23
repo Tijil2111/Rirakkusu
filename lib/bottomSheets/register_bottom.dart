@@ -5,35 +5,36 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:reduceo/shared/constants.dart';
 
-class LoginBottomSheet extends StatefulWidget {
-  const LoginBottomSheet({Key? key}) : super(key: key);
+class RegisterBottom extends StatefulWidget {
+  const RegisterBottom({Key? key}) : super(key: key);
 
   @override
-  _LoginBottomSheetState createState() => _LoginBottomSheetState();
+  _RegisterBottomState createState() => _RegisterBottomState();
 }
 
-class _LoginBottomSheetState extends State<LoginBottomSheet> {
+class _RegisterBottomState extends State<RegisterBottom> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   var error = "";
 
-  Future signIn() async {
+  void dispose() {
+    emailController.dispose();
+    passwordController.dispose();
+    super.dispose();
+  }
+
+  Future signUp() async {
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: emailController.text.trim(),
         password: passwordController.text.trim(),
       );
       Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
       print(e);
-      error = "Either the Email or the Password is Incorrect";
+      error =
+          "Enter a valid Email/Maybe the email is already in use or Minimum of 6 character long Password";
     }
-  }
-
-  void dispose() {
-    emailController.dispose();
-    passwordController.dispose();
-    super.dispose();
   }
 
   @override
@@ -43,12 +44,13 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
         child: Column(
           children: [
             ClipRRect(
-                child: Image(
-              image: AssetImage('assets/wave.png'),
-            )),
+              child: Image(
+                image: AssetImage('assets/wave.png'),
+              ),
+            ),
             Padding(
-              padding: const EdgeInsets.only(right: 190.0),
-              child: Text("Welcome Back !",
+              padding: const EdgeInsets.only(right: 230.0),
+              child: Text("Hola Friend !",
                   style: TextStyle(
                     color: Colors.deepOrangeAccent,
                     fontWeight: FontWeight.bold,
@@ -57,8 +59,8 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
             ),
             SizedBox(height: 10),
             Padding(
-              padding: const EdgeInsets.only(right: 130.0),
-              child: Text("We are so excited to see you !",
+              padding: const EdgeInsets.only(right: 185.0),
+              child: Text("Lets get you registered",
                   style: TextStyle(
                     color: Colors.deepOrangeAccent,
                     fontWeight: FontWeight.bold,
@@ -69,8 +71,8 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
               height: 50,
             ),
             Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: TextField(
+              padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
+              child: TextFormField(
                 controller: emailController,
                 cursorColor: Colors.deepOrangeAccent,
                 textInputAction: TextInputAction.next,
@@ -80,7 +82,7 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
             ),
             Padding(
               padding: const EdgeInsets.all(10.0),
-              child: TextField(
+              child: TextFormField(
                 controller: passwordController,
                 cursorColor: Colors.deepOrangeAccent,
                 textInputAction: TextInputAction.next,
@@ -92,22 +94,26 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
             ElevatedButton.icon(
               icon: const FaIcon(FontAwesomeIcons.lock),
               onPressed: () {
-                signIn();
+                signUp();
               },
-              label: const Text('Securely Login'),
+              label: const Text('Securely Register'),
               style: ElevatedButton.styleFrom(
                 primary: Colors.deepOrangeAccent,
                 minimumSize: const Size(300, 50),
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 15,
             ),
-            Text(
-              error,
-              style: TextStyle(
-                color: Colors.red,
-                fontSize: 15,
+            Padding(
+              padding: const EdgeInsets.all(14.0),
+              child: Text(
+                error,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 15,
+                ),
               ),
             )
           ],

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:reduceo/bottomSheets/login_bottom.dart';
+import 'package:reduceo/bottomSheets/register_bottom.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -47,7 +48,7 @@ class LoginScreen extends StatelessWidget {
               },
               label: const Text('Login With Mail'),
               style: ElevatedButton.styleFrom(
-                  primary: Colors.deepPurpleAccent,
+                  primary: Colors.deepOrangeAccent,
                   minimumSize: const Size(300, 50)),
             ),
             const SizedBox(
@@ -55,10 +56,23 @@ class LoginScreen extends StatelessWidget {
             ),
             ElevatedButton.icon(
                 icon: const FaIcon(FontAwesomeIcons.solidEnvelope),
-                onPressed: () {},
+                onPressed: () {
+                  showModalBottomSheet(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20.0),
+                      ),
+                      isScrollControlled: true,
+                      context: context,
+                      builder: (BuildContext context) {
+                        return Container(
+                          height: 700,
+                          child: RegisterBottom(),
+                        );
+                      });
+                },
                 label: const Text('Register With Mail'),
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.deepPurpleAccent,
+                    primary: Colors.deepOrangeAccent,
                     minimumSize: const Size(300, 50))),
           ],
         )));

@@ -5,6 +5,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
 import 'package:provider/provider.dart';
+import 'package:reduceo/Pages/home.dart';
 import 'package:reduceo/Pages/main_home.dart';
 
 import 'Pages/login.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) => MaterialApp(
           routes: {
-            '/home': (context) => const MainHome(),
+            '/main': (context) => const MainHome(),
           },
           debugShowCheckedModeBanner: false,
           home: AnimatedSplashScreen(
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
               splash: Text('Reduceo',
                   style: TextStyle(
                       fontSize: 35,
-                      color: Colors.deepPurpleAccent,
+                      color: Colors.deepOrangeAccent,
                       fontWeight: FontWeight.bold)),
               nextScreen: Wrapper(),
               splashTransition: SplashTransition.fadeTransition,
