@@ -15,8 +15,8 @@ class AboutScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'About You',
-          style: TextStyle(
-              color: Colors.deepOrangeAccent, fontWeight: FontWeight.bold),
+          style:
+              TextStyle(color: Colors.deepOrange, fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         backgroundColor: Colors.white,
@@ -27,7 +27,7 @@ class AboutScreen extends StatelessWidget {
             },
             child: const Icon(
               Icons.arrow_back_ios_new_outlined,
-              color: Colors.deepOrangeAccent,
+              color: Colors.deepOrange,
               size: 16,
             )),
       ),
@@ -49,7 +49,7 @@ class AboutScreen extends StatelessWidget {
                 'Your email id is ${user?.email}',
                 style: TextStyle(
                   fontSize: 20,
-                  color: Colors.deepOrangeAccent,
+                  color: Colors.deepOrange,
                 ),
               ),
             ),
@@ -62,7 +62,7 @@ class AboutScreen extends StatelessWidget {
                 'Check your Unique ID',
                 style: TextStyle(
                   fontSize: 20,
-                  color: Colors.deepOrangeAccent,
+                  color: Colors.deepOrange,
                 ),
               ),
             ),
@@ -81,14 +81,14 @@ class AboutScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Colors.deepOrangeAccent,
+                          color: Colors.deepOrange,
                         ),
                       ),
                       content: Text(
                         'Dont Share it. Your UID : ${user?.uid}',
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
-                          color: Colors.deepOrangeAccent,
+                          color: Colors.deepOrange,
                         ),
                       ),
                     );
@@ -97,7 +97,7 @@ class AboutScreen extends StatelessWidget {
               },
               label: const Text('Reveal It'),
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepOrangeAccent,
+                primary: Colors.deepOrange,
                 minimumSize: const Size(300, 50),
               ),
             ),
@@ -116,7 +116,7 @@ class AboutScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Colors.deepOrangeAccent,
+                          color: Colors.deepOrange,
                         ),
                       ),
                       content: Row(
@@ -130,7 +130,7 @@ class AboutScreen extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                             ),
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.deepOrangeAccent,
+                              primary: Colors.deepOrange,
                               minimumSize: const Size(40, 50),
                             ),
                           ),
@@ -147,7 +147,7 @@ class AboutScreen extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                             ),
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.deepOrangeAccent,
+                              primary: Colors.deepOrange,
                               minimumSize: const Size(40, 50),
                             ),
                           ),
@@ -159,7 +159,7 @@ class AboutScreen extends StatelessWidget {
               },
               label: const Text('Log Out'),
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepOrangeAccent,
+                primary: Colors.deepOrange,
                 minimumSize: const Size(300, 50),
               ),
             ),

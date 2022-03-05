@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, unused_catch_clause, annotate_overrides
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -25,7 +25,6 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
       );
       Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
-      print(e);
       error = "Either the Email or the Password is Incorrect";
     }
   }
@@ -50,7 +49,7 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
               padding: const EdgeInsets.only(right: 190.0),
               child: Text("Welcome Back !",
                   style: TextStyle(
-                    color: Colors.deepOrangeAccent,
+                    color: Colors.deepOrange,
                     fontWeight: FontWeight.bold,
                     fontSize: 24,
                   )),
@@ -60,7 +59,7 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
               padding: const EdgeInsets.only(right: 130.0),
               child: Text("We are so excited to see you !",
                   style: TextStyle(
-                    color: Colors.deepOrangeAccent,
+                    color: Colors.deepOrange,
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                   )),
@@ -72,7 +71,7 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
               padding: const EdgeInsets.all(10.0),
               child: TextField(
                 controller: emailController,
-                cursorColor: Colors.deepOrangeAccent,
+                cursorColor: Colors.deepOrange,
                 textInputAction: TextInputAction.next,
                 decoration:
                     textInputDecoration.copyWith(hintText: 'Email Address'),
@@ -82,7 +81,7 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
               padding: const EdgeInsets.all(10.0),
               child: TextField(
                 controller: passwordController,
-                cursorColor: Colors.deepOrangeAccent,
+                cursorColor: Colors.deepOrange,
                 textInputAction: TextInputAction.next,
                 obscureText: true,
                 decoration: textInputDecoration.copyWith(hintText: 'Password'),
@@ -96,7 +95,7 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
               },
               label: const Text('Securely Login'),
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepOrangeAccent,
+                primary: Colors.deepOrange,
                 minimumSize: const Size(300, 50),
               ),
             ),

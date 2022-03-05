@@ -20,6 +20,7 @@ class _MainHomeState extends State<MainHome> {
     Blogs(),
     AboutScreen(),
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,21 +34,21 @@ class _MainHomeState extends State<MainHome> {
                 icon: Icon(
                   Icons.home,
                   size: 30,
-                  color: Colors.deepOrangeAccent,
+                  color: Colors.deepOrange,
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.message_outlined,
+                  Icons.book_online_outlined,
                   size: 30,
-                  color: Colors.deepOrangeAccent,
+                  color: Colors.deepOrange,
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.account_circle,
                   size: 30,
-                  color: Colors.deepOrangeAccent,
+                  color: Colors.deepOrange,
                 ),
                 label: ''),
           ],

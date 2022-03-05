@@ -1,11 +1,12 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, use_key_in_widget_constructors
 
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:provider/provider.dart';
-import 'package:reduceo/Pages/home.dart';
+
+import 'package:reduceo/Pages/blogs.dart';
+
 import 'package:reduceo/Pages/main_home.dart';
 
 import 'Pages/login.dart';
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) => MaterialApp(
           routes: {
             '/main': (context) => const MainHome(),
+            '/blogs': (context) => Blogs(),
           },
           debugShowCheckedModeBanner: false,
           home: AnimatedSplashScreen(
@@ -30,7 +32,7 @@ class MyApp extends StatelessWidget {
               splash: Text('Reduceo',
                   style: TextStyle(
                       fontSize: 35,
-                      color: Colors.deepOrangeAccent,
+                      color: Colors.deepOrange,
                       fontWeight: FontWeight.bold)),
               nextScreen: Wrapper(),
               splashTransition: SplashTransition.fadeTransition,

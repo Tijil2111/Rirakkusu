@@ -1,3 +1,5 @@
+// ignore_for_file: sized_box_for_whitespace
+
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:reduceo/bottomSheets/login_bottom.dart';
@@ -42,14 +44,13 @@ class LoginScreen extends StatelessWidget {
                     builder: (BuildContext context) {
                       return Container(
                         height: 700,
-                        child: LoginBottomSheet(),
+                        child: const LoginBottomSheet(),
                       );
                     });
               },
               label: const Text('Login With Mail'),
               style: ElevatedButton.styleFrom(
-                  primary: Colors.deepOrangeAccent,
-                  minimumSize: const Size(300, 50)),
+                  primary: Colors.deepOrange, minimumSize: const Size(300, 50)),
             ),
             const SizedBox(
               height: 40,
@@ -66,13 +67,13 @@ class LoginScreen extends StatelessWidget {
                       builder: (BuildContext context) {
                         return Container(
                           height: 700,
-                          child: RegisterBottom(),
+                          child: const RegisterBottom(),
                         );
                       });
                 },
                 label: const Text('Register With Mail'),
                 style: ElevatedButton.styleFrom(
-                    primary: Colors.deepOrangeAccent,
+                    primary: Colors.deepOrange,
                     minimumSize: const Size(300, 50))),
           ],
         )));

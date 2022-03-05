@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors
+// ignore_for_file: avoid_unnecessary_containers, prefer_const_constructors, avoid_print, annotate_overrides
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
@@ -52,7 +52,7 @@ class _RegisterBottomState extends State<RegisterBottom> {
               padding: const EdgeInsets.only(right: 230.0),
               child: Text("Hola Friend !",
                   style: TextStyle(
-                    color: Colors.deepOrangeAccent,
+                    color: Colors.deepOrange,
                     fontWeight: FontWeight.bold,
                     fontSize: 24,
                   )),
@@ -62,7 +62,7 @@ class _RegisterBottomState extends State<RegisterBottom> {
               padding: const EdgeInsets.only(right: 185.0),
               child: Text("Lets get you registered",
                   style: TextStyle(
-                    color: Colors.deepOrangeAccent,
+                    color: Colors.deepOrange,
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                   )),
@@ -74,7 +74,7 @@ class _RegisterBottomState extends State<RegisterBottom> {
               padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
               child: TextFormField(
                 controller: emailController,
-                cursorColor: Colors.deepOrangeAccent,
+                cursorColor: Colors.deepOrange,
                 textInputAction: TextInputAction.next,
                 decoration:
                     textInputDecoration.copyWith(hintText: 'Email Address'),
@@ -84,7 +84,7 @@ class _RegisterBottomState extends State<RegisterBottom> {
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
                 controller: passwordController,
-                cursorColor: Colors.deepOrangeAccent,
+                cursorColor: Colors.deepOrange,
                 textInputAction: TextInputAction.next,
                 obscureText: true,
                 decoration: textInputDecoration.copyWith(hintText: 'Password'),
@@ -98,7 +98,7 @@ class _RegisterBottomState extends State<RegisterBottom> {
               },
               label: const Text('Securely Register'),
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepOrangeAccent,
+                primary: Colors.deepOrange,
                 minimumSize: const Size(300, 50),
               ),
             ),
