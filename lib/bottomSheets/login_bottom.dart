@@ -38,6 +38,7 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.white,
       child: Center(
         child: Column(
           children: [
@@ -72,6 +73,7 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
               child: TextField(
                 controller: emailController,
                 cursorColor: Colors.deepOrange,
+                style: TextStyle(color: Colors.red),
                 textInputAction: TextInputAction.next,
                 decoration:
                     textInputDecoration.copyWith(hintText: 'Email Address'),
@@ -81,6 +83,7 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
               padding: const EdgeInsets.all(10.0),
               child: TextField(
                 controller: passwordController,
+                style: TextStyle(color: Colors.red),
                 cursorColor: Colors.deepOrange,
                 textInputAction: TextInputAction.next,
                 obscureText: true,

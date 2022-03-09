@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:reduceo/Pages/about.dart';
 import 'package:reduceo/Pages/blogs.dart';
 import 'package:reduceo/Pages/home.dart';
+import 'package:reduceo/Pages/reduceo.dart';
+import 'package:reduceo/bottomSheets/addBlog.dart';
 
 class MainHome extends StatefulWidget {
   const MainHome({Key? key}) : super(key: key);
@@ -17,6 +19,7 @@ class _MainHomeState extends State<MainHome> {
 
   final _pageOptions = [
     HomeScreen(),
+    ReduceoPage(),
     Blogs(),
     AboutScreen(),
   ];
@@ -24,15 +27,47 @@ class _MainHomeState extends State<MainHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.white,
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.deepOrange,
+          elevation: 40,
+          foregroundColor: Colors.white,
+          onPressed: () {
+            showModalBottomSheet(
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(20.0),
+                ),
+                isScrollControlled: true,
+                context: context,
+                builder: (BuildContext context) {
+                  return Container(
+                    height: 700,
+                    child: AddBlog(),
+                  );
+                });
+          },
+          child: Icon(
+            Icons.add,
+            color: Colors.white,
+          ), //icon inside button
+        ),
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         body: _pageOptions[selectedPage],
         bottomNavigationBar: BottomNavigationBar(
+          type: BottomNavigationBarType.fixed, // Fixed
+          backgroundColor: Colors.white,
           showSelectedLabels: false,
           showUnselectedLabels: false,
           items: const [
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.home,
+                  size: 30,
+                  color: Colors.deepOrange,
+                ),
+                label: ''),
+            BottomNavigationBarItem(
+                icon: Icon(
+                  Icons.emoji_emotions,
                   size: 30,
                   color: Colors.deepOrange,
                 ),
@@ -52,10 +87,8 @@ class _MainHomeState extends State<MainHome> {
                 ),
                 label: ''),
           ],
-          selectedItemColor: Colors.black,
           elevation: 5.0,
           currentIndex: selectedPage,
-          backgroundColor: Colors.white,
           onTap: (index) {
             setState(() {
               selectedPage = index;

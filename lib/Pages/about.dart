@@ -2,6 +2,7 @@
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class AboutScreen extends StatelessWidget {
@@ -34,10 +35,14 @@ class AboutScreen extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
+            SizedBox(
+              height: 50,
+            ),
             ClipRRect(
-              child: Image(
-                image: AssetImage('assets/user.png'),
-                height: 200,
+              child: Icon(
+                Icons.person,
+                size: 152,
+                color: Colors.deepOrange,
               ),
             ),
             SizedBox(
@@ -56,51 +61,7 @@ class AboutScreen extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: Text(
-                'Check your Unique ID',
-                style: TextStyle(
-                  fontSize: 20,
-                  color: Colors.deepOrange,
-                ),
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            ElevatedButton.icon(
-              icon: const FaIcon(FontAwesomeIcons.solidEye),
-              onPressed: () {
-                showDialog(
-                  context: context,
-                  builder: (BuildContext context) {
-                    return AlertDialog(
-                      title: Text(
-                        'Your UID',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.deepOrange,
-                        ),
-                      ),
-                      content: Text(
-                        'Dont Share it. Your UID : ${user?.uid}',
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          color: Colors.deepOrange,
-                        ),
-                      ),
-                    );
-                  },
-                );
-              },
-              label: const Text('Reveal It'),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.deepOrange,
-                minimumSize: const Size(300, 50),
-              ),
-            ),
+            
             SizedBox(
               height: 20,
             ),
@@ -111,6 +72,7 @@ class AboutScreen extends StatelessWidget {
                   context: context,
                   builder: (BuildContext context) {
                     return AlertDialog(
+                      backgroundColor: Colors.white,
                       title: Text(
                         'Are You Sure ?',
                         textAlign: TextAlign.center,
@@ -158,6 +120,43 @@ class AboutScreen extends StatelessWidget {
                 );
               },
               label: const Text('Log Out'),
+              style: ElevatedButton.styleFrom(
+                primary: Colors.deepOrange,
+                minimumSize: const Size(300, 50),
+              ),
+            ),
+
+            SizedBox(
+              height: 50,
+            ),
+            ElevatedButton.icon(
+              icon: const FaIcon(FontAwesomeIcons.upload),
+              onPressed: () {
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return AlertDialog(
+                      backgroundColor: Colors.white,
+                      title: Text(
+                        'Current version v1',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.deepOrange,
+                        ),
+                      ),
+                      content: Text(
+                        'Check reduceo.vercel.app/download for the updated version if one is available',
+                        style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          color: Colors.deepOrange,
+                        ),
+                      ),
+                    );
+                  },
+                );
+              },
+              label: const Text('Check Updates'),
               style: ElevatedButton.styleFrom(
                 primary: Colors.deepOrange,
                 minimumSize: const Size(300, 50),

@@ -40,6 +40,7 @@ class _RegisterBottomState extends State<RegisterBottom> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: Colors.white,
       child: Center(
         child: Column(
           children: [
@@ -73,6 +74,7 @@ class _RegisterBottomState extends State<RegisterBottom> {
             Padding(
               padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
               child: TextFormField(
+                style: TextStyle(color: Colors.red),
                 controller: emailController,
                 cursorColor: Colors.deepOrange,
                 textInputAction: TextInputAction.next,
@@ -83,6 +85,7 @@ class _RegisterBottomState extends State<RegisterBottom> {
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
+                style: TextStyle(color: Colors.red),
                 controller: passwordController,
                 cursorColor: Colors.deepOrange,
                 textInputAction: TextInputAction.next,
@@ -90,7 +93,18 @@ class _RegisterBottomState extends State<RegisterBottom> {
                 decoration: textInputDecoration.copyWith(hintText: 'Password'),
               ),
             ),
-            const SizedBox(height: 80),
+            Padding(
+              padding: const EdgeInsets.all(14.0),
+              child: Text(
+                error,
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 15,
+                ),
+              ),
+            ),
+            const SizedBox(height: 50),
             ElevatedButton.icon(
               icon: const FaIcon(FontAwesomeIcons.lock),
               onPressed: () {
@@ -103,19 +117,8 @@ class _RegisterBottomState extends State<RegisterBottom> {
               ),
             ),
             SizedBox(
-              height: 15,
+              height: 5,
             ),
-            Padding(
-              padding: const EdgeInsets.all(14.0),
-              child: Text(
-                error,
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: Colors.red,
-                  fontSize: 15,
-                ),
-              ),
-            )
           ],
         ),
       ),

@@ -1,6 +1,7 @@
-// ignore_for_file: sized_box_for_whitespace
+// ignore_for_file: sized_box_for_whitespace, sized_box_for_whitespace
 
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:reduceo/bottomSheets/login_bottom.dart';
 import 'package:reduceo/bottomSheets/register_bottom.dart';
@@ -17,18 +18,34 @@ class LoginScreen extends StatelessWidget {
           children: [
             Padding(
               padding: const EdgeInsets.fromLTRB(10.0, 100.0, 10.0, 0.0),
-              child: ClipRRect(
-                child: Image.asset('assets/login.png'),
-                borderRadius: BorderRadius.circular(190),
+              child: Container(
+                height: 250,
+                child: ClipRRect(
+                  child: SvgPicture.asset(
+                    'assets/login.svg',
+                  ),
+                  borderRadius: BorderRadius.circular(190),
+                ),
               ),
             ),
+            const SizedBox(
+              height: 20,
+            ),
             const Text('Reduceo',
-                style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+                style: TextStyle(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.deepOrange,
+                )),
             const Padding(
               padding: EdgeInsets.all(40.0),
               child: Text(
                 'Your best companion to connect you to people around the world. And to reduce your tension and stress.',
-                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w500),
+                style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w500,
+                  color: Colors.deepOrange,
+                ),
                 textAlign: TextAlign.center,
               ),
             ),

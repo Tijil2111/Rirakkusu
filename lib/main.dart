@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
             '/main': (context) => const MainHome(),
             '/blogs': (context) => Blogs(),
           },
+          theme: ThemeData(scaffoldBackgroundColor: Colors.white),
           debugShowCheckedModeBanner: false,
           home: AnimatedSplashScreen(
               duration: 2000,
