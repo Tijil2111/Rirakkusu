@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:reduceo/Pages/blog_detail.dart';
 import 'package:reduceo/shared/loading.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class Blogs extends StatefulWidget {
   const Blogs({Key? key}) : super(key: key);
@@ -20,7 +22,6 @@ class _BlogsState extends State<Blogs> {
     return qn.docs;
   }
 
-
   navigateToDetail(DocumentSnapshot post) {
     Navigator.push(
       context,
@@ -29,23 +30,24 @@ class _BlogsState extends State<Blogs> {
       ),
     );
   }
-final dynamic listBg = [
+
+  final dynamic listBg = [
     'https://images.unsplash.com/photo-1600356604120-a282718b29b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2338&q=80',
-  'https://media.istockphoto.com/photos/close-up-of-small-blue-gray-mobile-home-with-a-front-and-side-porch-picture-id1297687835?s=612x612',
-  'https://images.unsplash.com/photo-1587731556938-38755b4803a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2356&q=80',
-  'https://images.unsplash.com/photo-1588629424594-b3a76a97fb73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80',
+    'https://media.istockphoto.com/photos/close-up-of-small-blue-gray-mobile-home-with-a-front-and-side-porch-picture-id1297687835?s=612x612',
+    'https://images.unsplash.com/photo-1587731556938-38755b4803a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2356&q=80',
+    'https://images.unsplash.com/photo-1588629424594-b3a76a97fb73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80',
   ];
 
-
   final _formKey = GlobalKey<FormState>();
-   final Random rnd = Random();
-    NetworkImage img() {
+  final Random rnd = Random();
+  NetworkImage img() {
     int min = 0;
     int max = listBg.length - 1;
     int r = min + rnd.nextInt(max - min);
     String imageName = listBg[r].toString();
     return NetworkImage(imageName);
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -64,7 +66,7 @@ final dynamic listBg = [
                       title: Text(
                         'Stories',
                         style: TextStyle(
-                            color: Colors.deepOrange,
+                            color: HexColor("#80E7FA"),
                             fontWeight: FontWeight.bold),
                       ),
                       centerTitle: true,
@@ -74,9 +76,9 @@ final dynamic listBg = [
                           onTap: () {
                             Navigator.pushReplacementNamed(context, '/main');
                           },
-                          child: const Icon(
+                          child: Icon(
                             Icons.arrow_back_ios_new_outlined,
-                            color: Colors.deepOrange,
+                            color: HexColor("#80E7FA"),
                             size: 16,
                           )),
                     ),
@@ -115,8 +117,8 @@ final dynamic listBg = [
                                                         textAlign:
                                                             TextAlign.center,
                                                         style: TextStyle(
-                                                          color:
-                                                              Colors.deepOrange,
+                                                          color: HexColor(
+                                                              "#80E7FA"),
                                                           fontSize: 23,
                                                         ),
                                                       ),
@@ -157,16 +159,3 @@ final dynamic listBg = [
     );
   }
 }
-// ListTile(
-//                               title: Text(
-//                                 snapshot.data[index]['title'],
-//                                 style: const TextStyle(
-//                                   color: Colors.deepOrange,
-//                                 ),
-//                               ),
-//                               subtitle: Text(
-//                                 'Written By: ' + snapshot.data[index]['name'],
-//                               ),
-//                               onTap: () =>
-//                                   navigateToDetail(snapshot.data[index]),
-//                             ),

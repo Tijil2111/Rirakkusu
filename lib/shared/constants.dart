@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
-const textInputDecoration = InputDecoration(
+var textInputDecoration = InputDecoration(
   filled: true,
   fillColor: Colors.white,
-  hintStyle: TextStyle(color: Colors.deepOrange),
+  hintStyle: TextStyle(color: HexColor("#80E7FA")),
   enabledBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.deepOrange, width: 2)),
+      borderSide: BorderSide(color: HexColor("#80E7FA"), width: 2)),
   focusedBorder: OutlineInputBorder(
-      borderSide: BorderSide(color: Colors.deepOrange, width: 2)),
+      borderSide: BorderSide(color: HexColor("#80E7FA"), width: 2)),
 );

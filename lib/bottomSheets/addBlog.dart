@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:reduceo/shared/constants.dart';
 
 class AddBlog extends StatefulWidget {
@@ -50,13 +51,14 @@ class _AddBlogState extends State<AddBlog> {
             ClipRRect(
               child: Image(
                 image: AssetImage('assets/wave.png'),
+                color: HexColor("#80E7FA"),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(right: 130.0),
               child: Text("Lets Add A New Story",
                   style: TextStyle(
-                    color: Colors.deepOrange,
+                    color: HexColor("#80E7FA"),
                     fontWeight: FontWeight.bold,
                     fontSize: 24,
                   )),
@@ -66,7 +68,7 @@ class _AddBlogState extends State<AddBlog> {
               padding: const EdgeInsets.only(right: 185.0),
               child: Text("Enter Some Info Below",
                   style: TextStyle(
-                    color: Colors.deepOrange,
+                    color: HexColor("#80E7FA"),
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                   )),
@@ -78,8 +80,8 @@ class _AddBlogState extends State<AddBlog> {
               padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
               child: TextFormField(
                 controller: titleController,
-                style: TextStyle(color: Colors.red),
-                cursorColor: Colors.deepOrange,
+                style: TextStyle(color: HexColor("#80E7FA")),
+                cursorColor: HexColor("#80E7FA"),
                 textInputAction: TextInputAction.next,
                 decoration: textInputDecoration.copyWith(hintText: 'Title'),
               ),
@@ -88,8 +90,8 @@ class _AddBlogState extends State<AddBlog> {
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
                 controller: nameController,
-                style: TextStyle(color: Colors.red),
-                cursorColor: Colors.deepOrange,
+                style: TextStyle(color: HexColor("#80E7FA")),
+                cursorColor: HexColor("#80E7FA"),
                 textInputAction: TextInputAction.next,
                 decoration: textInputDecoration.copyWith(hintText: 'Your Name'),
               ),
@@ -98,8 +100,8 @@ class _AddBlogState extends State<AddBlog> {
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
                 controller: tagController,
-                style: TextStyle(color: Colors.red),
-                cursorColor: Colors.deepOrange,
+                style: TextStyle(color: HexColor("#80E7FA")),
+                cursorColor: HexColor("#80E7FA"),
                 textInputAction: TextInputAction.next,
                 decoration: textInputDecoration.copyWith(
                     hintText: 'Tags (If none type none)'),
@@ -109,8 +111,8 @@ class _AddBlogState extends State<AddBlog> {
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
                 controller: tagController,
-                style: TextStyle(color: Colors.red),
-                cursorColor: Colors.deepOrange,
+                style: TextStyle(color: HexColor("#80E7FA")),
+                cursorColor: HexColor("#80E7FA"),
                 textInputAction: TextInputAction.next,
                 decoration: textInputDecoration.copyWith(
                     hintText: 'Links (If none type none)'),
@@ -122,8 +124,8 @@ class _AddBlogState extends State<AddBlog> {
                 keyboardType: TextInputType.multiline,
                 maxLines: null,
                 controller: descriptionController,
-                style: TextStyle(color: Colors.red),
-                cursorColor: Colors.deepOrange,
+                style: TextStyle(color: HexColor("#80E7FA")),
+                cursorColor: HexColor("#80E7FA"),
                 textInputAction: TextInputAction.next,
                 decoration:
                     textInputDecoration.copyWith(hintText: 'The Blog Itself !'),
@@ -143,7 +145,7 @@ class _AddBlogState extends State<AddBlog> {
               },
               label: const Text('Add It !'),
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepOrange,
+                primary: HexColor("#80E7FA"),
                 minimumSize: const Size(300, 50),
               ),
             ),

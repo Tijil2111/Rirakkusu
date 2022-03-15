@@ -8,13 +8,32 @@ import 'package:page_transition/page_transition.dart';
 import 'package:reduceo/Pages/blogs.dart';
 
 import 'package:reduceo/Pages/main_home.dart';
+import 'package:reduceo/Pages/reduceo.dart';
+import 'package:reduceo/Pages/tour.dart';
 
 import 'Pages/login.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:hexcolor/hexcolor.dart';
+import 'package:awesome_notifications/awesome_notifications.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  AwesomeNotifications().initialize(
+      null, // icon for your app notification
+      [
+        NotificationChannel(
+            channelKey: 'key1',
+            channelName: 'Proto Coders Point',
+            channelDescription: "Notification example",
+            defaultColor: Color(0XFF9050DD),
+            ledColor: Colors.white,
+            playSound: true,
+            enableLights:true,
+            enableVibration: true
+        )
+      ]
+  );
 
   runApp(MyApp());
 }
@@ -25,6 +44,8 @@ class MyApp extends StatelessWidget {
           routes: {
             '/main': (context) => const MainHome(),
             '/blogs': (context) => Blogs(),
+            '/reduceo': (context) => ReduceoPage(),
+            '/tour': (context) => Tour(),
           },
           theme: ThemeData(scaffoldBackgroundColor: Colors.white),
           debugShowCheckedModeBanner: false,
@@ -33,12 +54,14 @@ class MyApp extends StatelessWidget {
               splash: Text('Reduceo',
                   style: TextStyle(
                       fontSize: 35,
-                      color: Colors.deepOrange,
+                      color: HexColor("#80E7FA"),
                       fontWeight: FontWeight.bold)),
               nextScreen: Wrapper(),
               splashTransition: SplashTransition.fadeTransition,
               pageTransitionType: PageTransitionType.fade,
-              backgroundColor: Colors.white));
+              backgroundColor: Colors.white
+          )
+  );
 }
 
 class Wrapper extends StatelessWidget {

@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class AboutScreen extends StatelessWidget {
   const AboutScreen({Key? key}) : super(key: key);
@@ -16,8 +17,8 @@ class AboutScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'About You',
-          style:
-              TextStyle(color: Colors.deepOrange, fontWeight: FontWeight.bold),
+          style: TextStyle(
+              color: HexColor("#80E7FA"), fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         backgroundColor: Colors.white,
@@ -26,9 +27,9 @@ class AboutScreen extends StatelessWidget {
             onTap: () {
               Navigator.pushReplacementNamed(context, '/main');
             },
-            child: const Icon(
+            child: Icon(
               Icons.arrow_back_ios_new_outlined,
-              color: Colors.deepOrange,
+              color: HexColor("#80E7FA"),
               size: 16,
             )),
       ),
@@ -42,7 +43,7 @@ class AboutScreen extends StatelessWidget {
               child: Icon(
                 Icons.person,
                 size: 152,
-                color: Colors.deepOrange,
+                color: HexColor("#80E7FA"),
               ),
             ),
             SizedBox(
@@ -54,14 +55,13 @@ class AboutScreen extends StatelessWidget {
                 'Your email id is ${user?.email}',
                 style: TextStyle(
                   fontSize: 20,
-                  color: Colors.deepOrange,
+                  color: HexColor("#80E7FA"),
                 ),
               ),
             ),
             SizedBox(
               height: 20,
             ),
-            
             SizedBox(
               height: 20,
             ),
@@ -78,7 +78,7 @@ class AboutScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Colors.deepOrange,
+                          color: HexColor("#80E7FA"),
                         ),
                       ),
                       content: Row(
@@ -92,7 +92,7 @@ class AboutScreen extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                             ),
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.deepOrange,
+                              primary: HexColor("#80E7FA"),
                               minimumSize: const Size(40, 50),
                             ),
                           ),
@@ -109,7 +109,7 @@ class AboutScreen extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                             ),
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.deepOrange,
+                              primary: HexColor("#80E7FA"),
                               minimumSize: const Size(40, 50),
                             ),
                           ),
@@ -121,11 +121,10 @@ class AboutScreen extends StatelessWidget {
               },
               label: const Text('Log Out'),
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepOrange,
+                primary: HexColor("#80E7FA"),
                 minimumSize: const Size(300, 50),
               ),
             ),
-
             SizedBox(
               height: 50,
             ),
@@ -142,14 +141,15 @@ class AboutScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: Colors.deepOrange,
+                          color: HexColor("#80E7FA"),
                         ),
                       ),
                       content: Text(
-                        'Check reduceo.vercel.app/download for the updated version if one is available',
+                        'If downloaded from Samsung Store it will update automatically.                 '
+                        'If downloaded from website check reduceo.vercel.app/downloads',
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
-                          color: Colors.deepOrange,
+                          color: HexColor("#80E7FA"),
                         ),
                       ),
                     );
@@ -158,7 +158,7 @@ class AboutScreen extends StatelessWidget {
               },
               label: const Text('Check Updates'),
               style: ElevatedButton.styleFrom(
-                primary: Colors.deepOrange,
+                primary: HexColor("#80E7FA"),
                 minimumSize: const Size(300, 50),
               ),
             ),

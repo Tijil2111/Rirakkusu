@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class Loading extends StatelessWidget {
   @override
@@ -15,7 +16,7 @@ class Loading extends StatelessWidget {
             height: 350,
           ),
           SpinKitThreeInOut(
-            color: Colors.deepOrange,
+            color: HexColor("#80E7FA"),
             size: 30.0,
           ),
           SizedBox(
@@ -24,7 +25,7 @@ class Loading extends StatelessWidget {
           Text(
             'Loading Some Stories....',
             style: TextStyle(
-              color: Colors.deepOrange,
+              color: HexColor("#80E7FA"),
               fontSize: 15,
             ),
           ),

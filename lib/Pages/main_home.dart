@@ -6,6 +6,7 @@ import 'package:reduceo/Pages/blogs.dart';
 import 'package:reduceo/Pages/home.dart';
 import 'package:reduceo/Pages/reduceo.dart';
 import 'package:reduceo/bottomSheets/addBlog.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class MainHome extends StatefulWidget {
   const MainHome({Key? key}) : super(key: key);
@@ -27,8 +28,9 @@ class _MainHomeState extends State<MainHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
         floatingActionButton: FloatingActionButton(
-          backgroundColor: Colors.deepOrange,
+          backgroundColor: HexColor("#80E7FA"),
           elevation: 40,
           foregroundColor: Colors.white,
           onPressed: () {
@@ -57,33 +59,33 @@ class _MainHomeState extends State<MainHome> {
           backgroundColor: Colors.white,
           showSelectedLabels: false,
           showUnselectedLabels: false,
-          items: const [
+          items: [
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.home,
                   size: 30,
-                  color: Colors.deepOrange,
+                  color: HexColor("#80E7FA"),
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.emoji_emotions,
                   size: 30,
-                  color: Colors.deepOrange,
+                  color: HexColor("#80E7FA"),
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.book_online_outlined,
                   size: 30,
-                  color: Colors.deepOrange,
+                  color: HexColor("#80E7FA"),
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.account_circle,
                   size: 30,
-                  color: Colors.deepOrange,
+                  color: HexColor("#80E7FA"),
                 ),
                 label: ''),
           ],

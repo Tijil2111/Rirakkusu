@@ -4,6 +4,7 @@ import 'dart:math';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class BlogsDetail extends StatefulWidget {
   final DocumentSnapshot post;
@@ -17,21 +18,21 @@ class BlogsDetail extends StatefulWidget {
 class _BlogsDetailState extends State<BlogsDetail> {
   final dynamic listBg = [
     'https://images.unsplash.com/photo-1600356604120-a282718b29b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2338&q=80',
-  'https://media.istockphoto.com/photos/close-up-of-small-blue-gray-mobile-home-with-a-front-and-side-porch-picture-id1297687835?s=612x612',
-  'https://images.unsplash.com/photo-1587731556938-38755b4803a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2356&q=80',
-  'https://images.unsplash.com/photo-1588629424594-b3a76a97fb73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80',
+    'https://media.istockphoto.com/photos/close-up-of-small-blue-gray-mobile-home-with-a-front-and-side-porch-picture-id1297687835?s=612x612',
+    'https://images.unsplash.com/photo-1587731556938-38755b4803a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2356&q=80',
+    'https://images.unsplash.com/photo-1588629424594-b3a76a97fb73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80',
   ];
 
-
   final _formKey = GlobalKey<FormState>();
-   final Random rnd = Random();
-    NetworkImage img() {
+  final Random rnd = Random();
+  NetworkImage img() {
     int min = 0;
     int max = listBg.length - 1;
     int r = min + rnd.nextInt(max - min);
     String imageName = listBg[r].toString();
     return NetworkImage(imageName);
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -55,7 +56,7 @@ class _BlogsDetailState extends State<BlogsDetail> {
                       },
                       child: Icon(
                         Icons.arrow_back_ios_new_sharp,
-                        color: Colors.deepOrange,
+                        color: HexColor("#80E7FA"),
                       ),
                     ),
                   ),
@@ -63,13 +64,13 @@ class _BlogsDetailState extends State<BlogsDetail> {
               ),
               SizedBox(height: 20),
               Padding(
-                padding: const EdgeInsets.all(10),
+                padding: EdgeInsets.all(10),
                 child: Text(
                   widget.post["title"],
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    color: Colors.deepOrange,
+                    color: HexColor("#80E7FA"),
                   ),
                 ),
               ),
@@ -108,7 +109,7 @@ class _BlogsDetailState extends State<BlogsDetail> {
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Divider(
-                  color: Colors.deepOrange,
+                  color: HexColor("#80E7FA"),
                   thickness: 2,
                 ),
               ),
