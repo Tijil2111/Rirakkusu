@@ -1,5 +1,6 @@
 import 'package:fancy_on_boarding/fancy_on_boarding.dart';
 import 'package:flutter/material.dart';
+import 'package:hexcolor/hexcolor.dart';
 
 class Tour extends StatefulWidget {
   const Tour({Key? key}) : super(key: key);
@@ -12,116 +13,87 @@ class _TourState extends State<Tour> {
   @override
   final pageList = [
     PageModel(
-        color: const Color(0xFF678FB4),
-        heroImagePath: 'assets/png/hotels.png',
-        title: Text('Hotels',
+        color:  Colors.white,
+        heroImagePath: 'assets/sad.png',
+        title: Text('Be Stress Free',
             style: TextStyle(
               fontWeight: FontWeight.w800,
-              color: Colors.white,
+              color: HexColor("#80E7FA"),
               fontSize: 34.0,
             )),
-        body: Text('All hotels and hostels are sorted by hospitality rating',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18.0,
-            )),
-        iconImagePath: 'assets/png/key.png'),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text('Our Reduceo Page provides the best in class method of reducing stress via meditation',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: HexColor("#80E7FA"),
+                fontSize: 18.0,
+              )),
+        ),
+      icon: Icon(
+        Icons.emoji_emotions,
+        color: HexColor("#80E7FA"),
+      ),
+        ),
     PageModel(
-        color: const Color(0xFF65B0B4),
-        heroImagePath: 'assets/png/banks.png',
-        title: Text('Banks',
+      color:  Colors.white,
+      heroImagePath: 'assets/blog.png',
+        title: Text('Blogs and Blogs',
             style: TextStyle(
               fontWeight: FontWeight.w800,
-              color: Colors.white,
+              color: HexColor("#80E7FA"),
               fontSize: 34.0,
             )),
-        body: Text(
-            'We carefully verify all banks before adding them into the app',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18.0,
-            )),
-        iconImagePath: 'assets/png/wallet.png'),
+        body: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Text(
+              'Write your Stories share them with people and read their stories to get inspired ! ',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: HexColor("#80E7FA"),
+                fontSize: 18.0,
+              )),
+        ),
+      icon: Icon(
+        Icons.app_shortcut_sharp,
+        color: HexColor("#80E7FA"),
+      ),
+        ),
     PageModel(
-      color: const Color(0xFF9B90BC),
-      heroImagePath: 'assets/png/stores.png',
-      title: Text('Store',
+      color:  Colors.white,
+      heroImagePath: 'assets/friends.png',
+      title: Text('Add Reminders',
           style: TextStyle(
             fontWeight: FontWeight.w800,
-            color: Colors.white,
+            color: HexColor("#80E7FA"),
             fontSize: 34.0,
           )),
-      body: Text('All local stores are categorized for your convenience',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 18.0,
-          )),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Text('Dont have time for meditation use are brand new reminder feature',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: HexColor("#80E7FA"),
+              fontSize: 18.0,
+            )),
+      ),
       icon: Icon(
-        Icons.shopping_cart,
-        color: const Color(0xFF9B90BC),
+        Icons.alarm_add_rounded,
+        color: HexColor("#80E7FA"),
       ),
     ),
-    // SVG Pages Example
-    PageModel(
-        color: const Color(0xFF678FB4),
-        heroImagePath: 'assets/svg/hotel.svg',
-        title: Text('Hotels SVG',
-            style: TextStyle(
-              fontWeight: FontWeight.w800,
-              color: Colors.white,
-              fontSize: 34.0,
-            )),
-        body: Text('All hotels and hostels are sorted by hospitality rating',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18.0,
-            )),
-        iconImagePath: 'assets/svg/key.svg',
-        heroImageColor: Colors.white),
-    PageModel(
-        color: const Color(0xFF65B0B4),
-        heroImagePath: 'assets/svg/bank.svg',
-        title: Text('Banks SVG',
-            style: TextStyle(
-              fontWeight: FontWeight.w800,
-              color: Colors.white,
-              fontSize: 34.0,
-            )),
-        body: Text(
-            'We carefully verify all banks before adding them into the app',
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18.0,
-            )),
-        iconImagePath: 'assets/svg/cards.svg',
-        heroImageColor: Colors.white),
-    PageModel(
-      color: const Color(0xFF9B90BC),
-      heroImagePath: 'assets/svg/store.svg',
-      title: Text('Store SVG',
-          style: TextStyle(
-            fontWeight: FontWeight.w800,
-            color: Colors.white,
-            fontSize: 34.0,
-          )),
-      body: Text('All local stores are categorized for your convenience',
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 18.0,
-          )),
-      iconImagePath: 'assets/svg/cart.svg',
-    ),
+
   ];
   Widget build(BuildContext context) {
     return Scaffold(
       //Pass pageList and the mainPage route.
       body: FancyOnBoarding(
+        doneButtonTextStyle: TextStyle(
+          color: HexColor("#80E7FA"),
+        ),
+        skipButtonTextStyle: TextStyle(
+          color: HexColor("#80E7FA"),
+        ),
         doneButtonText: "Done",
         skipButtonText: "Skip",
         pageList: pageList,

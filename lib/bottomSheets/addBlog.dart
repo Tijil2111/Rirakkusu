@@ -18,7 +18,7 @@ class _AddBlogState extends State<AddBlog> {
   final titleController = TextEditingController();
   final descriptionController = TextEditingController();
   final tagController = TextEditingController();
-  final linkController = TextEditingController();
+
 
   Future addData() async {
     await FirebaseFirestore.instance.collection('stories').add(
@@ -27,7 +27,7 @@ class _AddBlogState extends State<AddBlog> {
         'title': titleController.text.trim(),
         'description': descriptionController.text.trim(),
         'tags': tagController.text.trim(),
-        'links': linkController.text.trim(),
+
       },
     ).then(
       (value) => print('Blog Added !'),
@@ -107,17 +107,7 @@ class _AddBlogState extends State<AddBlog> {
                     hintText: 'Tags (If none type none)'),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(10.0),
-              child: TextFormField(
-                controller: tagController,
-                style: TextStyle(color: HexColor("#80E7FA")),
-                cursorColor: HexColor("#80E7FA"),
-                textInputAction: TextInputAction.next,
-                decoration: textInputDecoration.copyWith(
-                    hintText: 'Links (If none type none)'),
-              ),
-            ),
+
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(

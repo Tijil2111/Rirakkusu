@@ -20,7 +20,7 @@ Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   AwesomeNotifications().initialize(
-      null, // icon for your app notification
+      'resource://drawable/res_app_icon', // icon for your app notification
       [
         NotificationChannel(
             channelKey: 'key1',
