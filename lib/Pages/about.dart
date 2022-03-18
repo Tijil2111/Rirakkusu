@@ -18,7 +18,7 @@ class AboutScreen extends StatelessWidget {
         title: Text(
           'About You',
           style: TextStyle(
-              color: HexColor("#80E7FA"), fontWeight: FontWeight.bold),
+              color: HexColor("#4166F5"), fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         backgroundColor: Colors.white,
@@ -29,7 +29,7 @@ class AboutScreen extends StatelessWidget {
             },
             child: Icon(
               Icons.arrow_back_ios_new_outlined,
-              color: HexColor("#80E7FA"),
+              color: HexColor("#4166F5"),
               size: 16,
             )),
       ),
@@ -43,7 +43,7 @@ class AboutScreen extends StatelessWidget {
               child: Icon(
                 Icons.person,
                 size: 152,
-                color: HexColor("#80E7FA"),
+                color: HexColor("#4166F5"),
               ),
             ),
             SizedBox(
@@ -55,7 +55,7 @@ class AboutScreen extends StatelessWidget {
                 'Your email id is ${user?.email}',
                 style: TextStyle(
                   fontSize: 20,
-                  color: HexColor("#80E7FA"),
+                  color: HexColor("#4166F5"),
                 ),
               ),
             ),
@@ -78,7 +78,7 @@ class AboutScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: HexColor("#80E7FA"),
+                          color: HexColor("#4166F5"),
                         ),
                       ),
                       content: Row(
@@ -92,7 +92,7 @@ class AboutScreen extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                             ),
                             style: ElevatedButton.styleFrom(
-                              primary: HexColor("#80E7FA"),
+                              primary: HexColor("#4166F5"),
                               minimumSize: const Size(40, 50),
                             ),
                           ),
@@ -109,7 +109,7 @@ class AboutScreen extends StatelessWidget {
                               style: TextStyle(color: Colors.white),
                             ),
                             style: ElevatedButton.styleFrom(
-                              primary: HexColor("#80E7FA"),
+                              primary: HexColor("#4166F5"),
                               minimumSize: const Size(40, 50),
                             ),
                           ),
@@ -121,7 +121,7 @@ class AboutScreen extends StatelessWidget {
               },
               label: const Text('Log Out'),
               style: ElevatedButton.styleFrom(
-                primary: HexColor("#80E7FA"),
+                primary: HexColor("#4166F5"),
                 minimumSize: const Size(300, 50),
               ),
             ),
@@ -141,15 +141,15 @@ class AboutScreen extends StatelessWidget {
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: HexColor("#80E7FA"),
+                          color: HexColor("#4166F5"),
                         ),
                       ),
                       content: Text(
                         'If downloaded from Samsung Store it will update automatically.                 '
-                        'If downloaded from website check reduceo.vercel.app/downloads',
+                        'If downloaded from website check rirakkusu.vercel.app/downloads',
                         style: TextStyle(
                           fontWeight: FontWeight.w500,
-                          color: HexColor("#80E7FA"),
+                          color: HexColor("#4166F5"),
                         ),
                       ),
                     );
@@ -158,7 +158,7 @@ class AboutScreen extends StatelessWidget {
               },
               label: const Text('Check Updates'),
               style: ElevatedButton.styleFrom(
-                primary: HexColor("#80E7FA"),
+                primary: HexColor("#4166F5"),
                 minimumSize: const Size(300, 50),
               ),
             ),

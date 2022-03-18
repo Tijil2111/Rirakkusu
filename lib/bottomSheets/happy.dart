@@ -18,7 +18,7 @@ class _HappyBottomState extends State<HappyBottom> {
         centerTitle: true,
         title: Text(
           'Being Happy !',
-          style: TextStyle(color: HexColor("#80E7FA")),
+          style: TextStyle(color: HexColor("#4166F5")),
         ),
       ),
       body: Center(
@@ -33,7 +33,7 @@ class _HappyBottomState extends State<HappyBottom> {
                 'You know what this is awesome ! You are happy ! Being happy is an essential essence of being a better person. We would like to recommend you to write some articles to help other people how they can be happy. Just be happy like this and remember Live Life King Size. <3 ',
                 style: TextStyle(
                   fontSize: 20,
-                  color: HexColor("#80E7FA"),
+                  color: HexColor("#4166F5"),
                 ),
               ),
             )

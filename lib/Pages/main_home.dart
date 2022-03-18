@@ -28,9 +28,8 @@ class _MainHomeState extends State<MainHome> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
         floatingActionButton: FloatingActionButton(
-          backgroundColor: HexColor("#80E7FA"),
+          backgroundColor: HexColor("#4166F5"),
           elevation: 40,
           foregroundColor: Colors.white,
           onPressed: () {
@@ -64,28 +63,28 @@ class _MainHomeState extends State<MainHome> {
                 icon: Icon(
                   Icons.home,
                   size: 30,
-                  color: HexColor("#80E7FA"),
+                  color: HexColor("#4166F5"),
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.emoji_emotions,
                   size: 30,
-                  color: HexColor("#80E7FA"),
+                  color: HexColor("#4166F5"),
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.book_online_outlined,
                   size: 30,
-                  color: HexColor("#80E7FA"),
+                  color: HexColor("#4166F5"),
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: Icon(
                   Icons.account_circle,
                   size: 30,
-                  color: HexColor("#80E7FA"),
+                  color: HexColor("#4166F5"),
                 ),
                 label: ''),
           ],

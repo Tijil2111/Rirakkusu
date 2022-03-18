@@ -19,7 +19,6 @@ class _AddBlogState extends State<AddBlog> {
   final descriptionController = TextEditingController();
   final tagController = TextEditingController();
 
-
   Future addData() async {
     await FirebaseFirestore.instance.collection('stories').add(
       {
@@ -27,7 +26,6 @@ class _AddBlogState extends State<AddBlog> {
         'title': titleController.text.trim(),
         'description': descriptionController.text.trim(),
         'tags': tagController.text.trim(),
-
       },
     ).then(
       (value) => print('Blog Added !'),
@@ -51,14 +49,14 @@ class _AddBlogState extends State<AddBlog> {
             ClipRRect(
               child: Image(
                 image: AssetImage('assets/wave.png'),
-                color: HexColor("#80E7FA"),
+                color: HexColor("#4166F5"),
               ),
             ),
             Padding(
               padding: const EdgeInsets.only(right: 130.0),
               child: Text("Lets Add A New Story",
                   style: TextStyle(
-                    color: HexColor("#80E7FA"),
+                    color: HexColor("#4166F5"),
                     fontWeight: FontWeight.bold,
                     fontSize: 24,
                   )),
@@ -68,7 +66,7 @@ class _AddBlogState extends State<AddBlog> {
               padding: const EdgeInsets.only(right: 185.0),
               child: Text("Enter Some Info Below",
                   style: TextStyle(
-                    color: HexColor("#80E7FA"),
+                    color: HexColor("#4166F5"),
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                   )),
@@ -80,8 +78,8 @@ class _AddBlogState extends State<AddBlog> {
               padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
               child: TextFormField(
                 controller: titleController,
-                style: TextStyle(color: HexColor("#80E7FA")),
-                cursorColor: HexColor("#80E7FA"),
+                style: TextStyle(color: HexColor("#4166F5")),
+                cursorColor: HexColor("#4166F5"),
                 textInputAction: TextInputAction.next,
                 decoration: textInputDecoration.copyWith(hintText: 'Title'),
               ),
@@ -90,8 +88,8 @@ class _AddBlogState extends State<AddBlog> {
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
                 controller: nameController,
-                style: TextStyle(color: HexColor("#80E7FA")),
-                cursorColor: HexColor("#80E7FA"),
+                style: TextStyle(color: HexColor("#4166F5")),
+                cursorColor: HexColor("#4166F5"),
                 textInputAction: TextInputAction.next,
                 decoration: textInputDecoration.copyWith(hintText: 'Your Name'),
               ),
@@ -100,22 +98,21 @@ class _AddBlogState extends State<AddBlog> {
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
                 controller: tagController,
-                style: TextStyle(color: HexColor("#80E7FA")),
-                cursorColor: HexColor("#80E7FA"),
+                style: TextStyle(color: HexColor("#4166F5")),
+                cursorColor: HexColor("#4166F5"),
                 textInputAction: TextInputAction.next,
                 decoration: textInputDecoration.copyWith(
                     hintText: 'Tags (If none type none)'),
               ),
             ),
-
             Padding(
               padding: const EdgeInsets.all(10.0),
               child: TextFormField(
                 keyboardType: TextInputType.multiline,
                 maxLines: null,
                 controller: descriptionController,
-                style: TextStyle(color: HexColor("#80E7FA")),
-                cursorColor: HexColor("#80E7FA"),
+                style: TextStyle(color: HexColor("#4166F5")),
+                cursorColor: HexColor("#4166F5"),
                 textInputAction: TextInputAction.next,
                 decoration:
                     textInputDecoration.copyWith(hintText: 'The Blog Itself !'),
@@ -135,7 +132,7 @@ class _AddBlogState extends State<AddBlog> {
               },
               label: const Text('Add It !'),
               style: ElevatedButton.styleFrom(
-                primary: HexColor("#80E7FA"),
+                primary: HexColor("#4166F5"),
                 minimumSize: const Size(300, 50),
               ),
             ),

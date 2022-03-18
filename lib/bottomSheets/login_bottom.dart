@@ -30,6 +30,12 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
       Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
       error = "Either the Email or the Password is Incorrect";
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(error),
+          backgroundColor: Colors.red,
+        ),
+      );
     }
   }
 
@@ -49,13 +55,13 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
             ClipRRect(
                 child: Image(
               image: AssetImage('assets/wave.png'),
-              color: HexColor("#C2F2FB"),
+              color: HexColor("#4166F5"),
             )),
             Padding(
               padding: const EdgeInsets.only(right: 190.0),
               child: Text("Welcome Back !",
                   style: TextStyle(
-                    color: HexColor("#80E7FA"),
+                    color: HexColor("#4166F5"),
                     fontWeight: FontWeight.bold,
                     fontSize: 24,
                   )),
@@ -65,7 +71,7 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
               padding: const EdgeInsets.only(right: 130.0),
               child: Text("We are so excited to see you !",
                   style: TextStyle(
-                    color: HexColor("#80E7FA"),
+                    color: HexColor("#4166F5"),
                     fontWeight: FontWeight.bold,
                     fontSize: 18,
                   )),
@@ -77,9 +83,9 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
               padding: const EdgeInsets.all(10.0),
               child: TextField(
                 controller: emailController,
-                cursorColor: HexColor("#80E7FA"),
+                cursorColor: HexColor("#4166F5"),
                 style: TextStyle(
-                  color: HexColor("#80E7FA"),
+                  color: HexColor("#4166F5"),
                 ),
                 textInputAction: TextInputAction.next,
                 decoration:
@@ -91,9 +97,9 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
               child: TextField(
                 controller: passwordController,
                 style: TextStyle(
-                  color: HexColor("#80E7FA"),
+                  color: HexColor("#4166F5"),
                 ),
-                cursorColor: HexColor("#80E7FA"),
+                cursorColor: HexColor("#4166F5"),
                 textInputAction: TextInputAction.next,
                 obscureText: true,
                 decoration: textInputDecoration.copyWith(hintText: 'Password'),
@@ -108,27 +114,21 @@ class _LoginBottomSheetState extends State<LoginBottomSheet> {
               },
               label: const Text('Securely Login'),
               style: ElevatedButton.styleFrom(
-                primary: HexColor("#80E7FA"),
+                primary: HexColor("#4166F5"),
                 minimumSize: const Size(300, 50),
               ),
             ),
             SizedBox(
               height: 20,
             ),
-            Text(
-              error,
-              style: TextStyle(
-                color: Colors.red,
-                fontSize: 15,
-              ),
-            )
           ],
         ),
       ),
     );
   }
 }
-void notifications() async{
+
+void notifications() async {
   Random random = new Random();
 
   int randomNumber = random.nextInt(10000);
@@ -138,8 +138,9 @@ void notifications() async{
         id: randomNumber,
         channelKey: 'key1',
         title: 'Look what is cooking in the app !',
-        body: 'People are adding new blogs ! Why dont you add yours and read theirs ? '
-    ),
-    schedule: NotificationInterval(interval: 36000, timeZone: timezone, repeats: true),
+        body:
+            'People are adding new blogs ! Why dont you add yours and read theirs ? '),
+    schedule: NotificationInterval(
+        interval: 36000, timeZone: timezone, repeats: true),
   );
 }

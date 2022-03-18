@@ -29,11 +29,9 @@ Future main() async {
             defaultColor: Color(0XFF9050DD),
             ledColor: Colors.white,
             playSound: true,
-            enableLights:true,
-            enableVibration: true
-        )
-      ]
-  );
+            enableLights: true,
+            enableVibration: true)
+      ]);
 
   runApp(MyApp());
 }
@@ -51,17 +49,15 @@ class MyApp extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           home: AnimatedSplashScreen(
               duration: 2000,
-              splash: Text('Reduceo',
+              splash: Text('Rirakkusu',
                   style: TextStyle(
                       fontSize: 35,
-                      color: HexColor("#80E7FA"),
+                      color: HexColor("#4166F5"),
                       fontWeight: FontWeight.bold)),
               nextScreen: Wrapper(),
               splashTransition: SplashTransition.fadeTransition,
               pageTransitionType: PageTransitionType.fade,
-              backgroundColor: Colors.white
-          )
-  );
+              backgroundColor: Colors.white));
 }
 
 class Wrapper extends StatelessWidget {

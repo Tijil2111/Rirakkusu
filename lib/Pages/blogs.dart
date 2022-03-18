@@ -66,7 +66,7 @@ class _BlogsState extends State<Blogs> {
                       title: Text(
                         'Stories',
                         style: TextStyle(
-                            color: HexColor("#80E7FA"),
+                            color: HexColor("#4166F5"),
                             fontWeight: FontWeight.bold),
                       ),
                       centerTitle: true,
@@ -78,7 +78,7 @@ class _BlogsState extends State<Blogs> {
                           },
                           child: Icon(
                             Icons.arrow_back_ios_new_outlined,
-                            color: HexColor("#80E7FA"),
+                            color: HexColor("#4166F5"),
                             size: 16,
                           )),
                     ),
@@ -118,7 +118,7 @@ class _BlogsState extends State<Blogs> {
                                                             TextAlign.center,
                                                         style: TextStyle(
                                                           color: HexColor(
-                                                              "#80E7FA"),
+                                                              "#4166F5"),
                                                           fontSize: 23,
                                                         ),
                                                       ),

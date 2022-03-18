@@ -16,7 +16,7 @@ class Loading extends StatelessWidget {
             height: 350,
           ),
           SpinKitThreeInOut(
-            color: HexColor("#80E7FA"),
+            color: HexColor("#4166F5"),
             size: 30.0,
           ),
           SizedBox(
@@ -25,7 +25,7 @@ class Loading extends StatelessWidget {
           Text(
             'Loading Some Stories....',
             style: TextStyle(
-              color: HexColor("#80E7FA"),
+              color: HexColor("#4166F5"),
               fontSize: 15,
             ),
           ),

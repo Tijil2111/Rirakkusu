@@ -18,7 +18,7 @@ class _AngryBottomState extends State<AngryBottom> {
         centerTitle: true,
         title: Text(
           'Why Angry ?',
-          style: TextStyle(color: HexColor("#80E7FA")),
+          style: TextStyle(color: HexColor("#4166F5")),
         ),
       ),
       body: Center(
@@ -33,7 +33,7 @@ class _AngryBottomState extends State<AngryBottom> {
                 'Lets discover why you are angry. A wise man said that Discovering the cause behind the problem is the solution. Why dont you listen some calm music ? Or maybe do something that you like. For example the creator likes to code and listen to his spotify when he is angry and so do his friends. Some people find peace in studying or solving intriguing problems.',
                 style: TextStyle(
                   fontSize: 20,
-                  color: HexColor("#80E7FA"),
+                  color: HexColor("#4166F5"),
                 ),
               ),
             )

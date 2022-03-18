@@ -32,11 +32,11 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            Text('Reduceo',
+            Text('Rirakkusu',
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
-                  color: HexColor("#80E7FA"),
+                  color: HexColor("#4166F5"),
                 )),
             Padding(
               padding: EdgeInsets.all(40.0),
@@ -45,7 +45,7 @@ class LoginScreen extends StatelessWidget {
                 style: TextStyle(
                   fontSize: 15,
                   fontWeight: FontWeight.w500,
-                  color: HexColor("#80E7FA"),
+                  color: HexColor("#4166F5"),
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -68,7 +68,7 @@ class LoginScreen extends StatelessWidget {
               },
               label: const Text('Login With Mail'),
               style: ElevatedButton.styleFrom(
-                  primary: HexColor("#80E7FA"),
+                  primary: HexColor("#4166F5"),
                   minimumSize: const Size(300, 50)),
             ),
             const SizedBox(
@@ -92,7 +92,7 @@ class LoginScreen extends StatelessWidget {
                 },
                 label: const Text('Register With Mail'),
                 style: ElevatedButton.styleFrom(
-                    primary: HexColor("#80E7FA"),
+                    primary: HexColor("#4166F5"),
                     minimumSize: const Size(300, 50))),
           ],
         )));

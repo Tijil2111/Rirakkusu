@@ -56,7 +56,7 @@ class _BlogsDetailState extends State<BlogsDetail> {
                       },
                       child: Icon(
                         Icons.arrow_back_ios_new_sharp,
-                        color: HexColor("#80E7FA"),
+                        color: HexColor("#4166F5"),
                       ),
                     ),
                   ),
@@ -70,7 +70,7 @@ class _BlogsDetailState extends State<BlogsDetail> {
                   style: TextStyle(
                     fontSize: 25,
                     fontWeight: FontWeight.bold,
-                    color: HexColor("#80E7FA"),
+                    color: HexColor("#4166F5"),
                   ),
                 ),
               ),
@@ -90,18 +90,18 @@ class _BlogsDetailState extends State<BlogsDetail> {
                   SizedBox(
                     width: 165,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Text(
-                      'Tags: ' + widget.post["tags"],
-                      style: const TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ),
                 ],
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(0, 10, 272, 0),
+                child: Text(
+                  'Tags: ' + widget.post["tags"],
+                  style: const TextStyle(
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
+                  ),
+                ),
               ),
               SizedBox(
                 height: 15,
@@ -109,7 +109,7 @@ class _BlogsDetailState extends State<BlogsDetail> {
               Padding(
                 padding: const EdgeInsets.all(15.0),
                 child: Divider(
-                  color: HexColor("#80E7FA"),
+                  color: HexColor("#4166F5"),
                   thickness: 2,
                 ),
               ),

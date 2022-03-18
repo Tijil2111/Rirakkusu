@@ -18,7 +18,7 @@ class _SadBottomState extends State<SadBottom> {
         centerTitle: true,
         title: Text(
           'Sadness Kills the Happiness',
-          style: TextStyle(color: HexColor("#80E7FA")),
+          style: TextStyle(color: HexColor("#4166F5")),
         ),
       ),
       body: Center(
@@ -33,7 +33,7 @@ class _SadBottomState extends State<SadBottom> {
                 'A wise man said , life is not about emotions it is about how you live it. Being able to discover the reason behind your problems shows your maturity. Being sad has something to do which your brain. Think of brain as a machine and a machine needs repairing. So does your brain. Sadness is often caused due to excess stress caused. Remove that stress and you will fly high. And I would suggest to watch some Anime or listen to cool music. (Great time pass you knnow, wink)',
                 style: TextStyle(
                   fontSize: 20,
-                  color: HexColor("#80E7FA"),
+                  color: HexColor("#4166F5"),
                 ),
               ),
             )

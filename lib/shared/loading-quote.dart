@@ -16,7 +16,7 @@ class LoadingQuote extends StatelessWidget {
             height: 300,
           ),
           SpinKitThreeInOut(
-            color: HexColor("#80E7FA"),
+            color: HexColor("#4166F5"),
             size: 30.0,
           ),
           SizedBox(
@@ -25,7 +25,7 @@ class LoadingQuote extends StatelessWidget {
           Text(
             'Quickly Loading...',
             style: TextStyle(
-              color: HexColor("#80E7FA"),
+              color: HexColor("#4166F5"),
               fontSize: 15,
             ),
           ),

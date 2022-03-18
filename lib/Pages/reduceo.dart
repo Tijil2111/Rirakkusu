@@ -28,7 +28,7 @@ class _ReduceoPageState extends State<ReduceoPage> {
         title: Text(
           'Reducing Mental Problems',
           style: TextStyle(
-              color: HexColor("#80E7FA"), fontWeight: FontWeight.bold),
+              color: HexColor("#4166F5"), fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
         backgroundColor: Colors.white,
@@ -39,7 +39,7 @@ class _ReduceoPageState extends State<ReduceoPage> {
             },
             child: Icon(
               Icons.arrow_back_ios_new_outlined,
-              color: HexColor("#80E7FA"),
+              color: HexColor("#4166F5"),
               size: 16,
             )),
       ),
@@ -83,7 +83,7 @@ class _ReduceoPageState extends State<ReduceoPage> {
                               borderRadius: BorderRadius.circular(15.0),
                             ),
                             elevation: 3,
-                            color: HexColor("#80E7FA"),
+                            color: HexColor("#4166F5"),
                             child: ListTile(
                               title: Padding(
                                 padding: const EdgeInsets.only(top: 20.0),
@@ -131,7 +131,7 @@ class _ReduceoPageState extends State<ReduceoPage> {
                               borderRadius: BorderRadius.circular(15.0),
                             ),
                             elevation: 3,
-                            color: HexColor("#80E7FA"),
+                            color: HexColor("#4166F5"),
                             child: ListTile(
                               title: Padding(
                                 padding: const EdgeInsets.only(top: 20.0),
@@ -159,7 +159,7 @@ class _ReduceoPageState extends State<ReduceoPage> {
                       children: [
                         Expanded(
                           child: InkWell(
-                            onTap: (){
+                            onTap: () {
                               Navigator.pushNamed(context, '/blogs');
                             },
                             child: Container(
@@ -199,14 +199,14 @@ class _ReduceoPageState extends State<ReduceoPage> {
                                         textAlign: TextAlign.center,
                                         style: TextStyle(
                                           fontWeight: FontWeight.bold,
-                                          color: HexColor("#80E7FA"),
+                                          color: HexColor("#4166F5"),
                                         ),
                                       ),
                                       content: Text(
                                         'Currently in development',
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          color: HexColor("#80E7FA"),
+                                          color: HexColor("#4166F5"),
                                         ),
                                       ),
                                     );
@@ -243,7 +243,7 @@ class _ReduceoPageState extends State<ReduceoPage> {
                     ),
                     Divider(
                       thickness: 5,
-                      color: HexColor('#80E7FA'),
+                      color: HexColor('#4166F5'),
                       indent: 20,
                       endIndent: 20,
                     ),
@@ -253,7 +253,7 @@ class _ReduceoPageState extends State<ReduceoPage> {
                     Text(
                       'Quotes ',
                       style: TextStyle(
-                        color: HexColor('#80E7FA'),
+                        color: HexColor('#4166F5'),
                         fontSize: 20,
                       ),
                     ),
@@ -272,14 +272,14 @@ class _ReduceoPageState extends State<ReduceoPage> {
                                 decoration: BoxDecoration(
                                   border: Border.all(
                                     width: 2,
-                                    color: HexColor("#80E7FA"),
+                                    color: HexColor("#4166F5"),
                                   ),
                                 ),
                                 child: Text(
                                   snapshot.data[index]['quote'],
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
-                                    color: HexColor("#80E7FA"),
+                                    color: HexColor("#4166F5"),
                                     fontSize: 15,
                                   ),
                                 ),

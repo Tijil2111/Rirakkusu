@@ -28,9 +28,9 @@ class _HomeScreenState extends State<HomeScreen> {
                 height: 50,
               ),
               Text(
-                'Reduceo',
+                'Rirakkusu',
                 style: TextStyle(
-                  color: HexColor("#80E7FA"),
+                  color: HexColor("#4166F5"),
                   fontSize: 25,
                   fontWeight: FontWeight.bold,
                 ),
@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Text(
                       'How are you feeling today ?',
                       style: TextStyle(
-                        color: HexColor("#80E7FA"),
+                        color: HexColor("#4166F5"),
                         fontSize: 15,
                         fontWeight: FontWeight.bold,
                       ),
@@ -145,6 +145,17 @@ class _HomeScreenState extends State<HomeScreen> {
               SizedBox(
                 height: 30,
               ),
+              Text(
+                'Top Activites',
+                style: TextStyle(
+                  color: HexColor('#4166F5'),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
               Row(
                 children: [
                   Expanded(
@@ -210,7 +221,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     elevation: 3,
-                    color: HexColor("#80E7FA"),
+                    color: HexColor("#4166F5"),
                     child: ListTile(
                       title: Padding(
                         padding: const EdgeInsets.only(top: 20.0),
@@ -244,7 +255,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       borderRadius: BorderRadius.circular(15.0),
                     ),
                     elevation: 3,
-                    color: HexColor("#80E7FA"),
+                    color: HexColor("#4166F5"),
                     child: ListTile(
                       title: Padding(
                         padding: const EdgeInsets.only(top: 20.0),
